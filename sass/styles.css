@@ -1,0 +1,143 @@
+/*--- Global Variables ---*/
+
+:root {
+    --main-color: #22B9FF;
+    
+    /* Text */
+    --title-color: #48465B;
+    --text-color: #C2C1CE;
+    
+    /* Background */
+    --bg-color: #F9F9FC;
+    
+    /* Miscellaneous */
+    --white: #FFFFFF;
+    --soft-gray: #F7F8FA;
+    --soft-gray-alt: #F3F1F4;
+    --soft-green: #DDF7F4;
+    --soft-blue: #DEF5FF;
+    --title-color-alt: var(--main-color);
+}
+
+/*--- Main Styles ---*/
+
+body {
+    background-color: var(--bg-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+/*--- Header ---*/
+.header {
+    position: relative;
+    z-index: 20;
+    box-shadow: 20px 8px 20px var(--soft-gray-alt);
+    font-weight: 500;
+}
+
+.active {
+    color: var(--main-color)!important;
+    background-color: var(--soft-gray);
+    border-radius: 2rem;
+}
+
+.menu-options span {
+    width: 40px;
+    height: 40px;
+}
+
+.shopping-cart-icon {
+    color: var(--text-color);
+}
+
+.user-icon {
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+
+/*--- Controllers ---*/
+.panel-option__container {
+    background-image: linear-gradient(110deg, var(--soft-gray) 70%, var(--white) 70%);
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+}
+
+.panel-option:nth-child(6) .panel-option__container, 
+.panel-option:nth-child(9) .panel-option__container {
+    background-image: linear-gradient(110deg, var(--soft-green) 70%, var(--white) 70%);
+}
+
+.panel-option:nth-child(8) .panel-option__container {
+    background-image: linear-gradient(110deg, var(--soft-blue) 70%, var(--white) 70%);
+}
+
+.panel-option__image {
+    display: flex;
+    justify-content: center;
+}
+
+.panel-option__image img {
+    width: 6rem;
+}
+
+.application__title {
+    color: var(--main-color);
+}
+
+.application__image svg {
+    height: 40px;
+}
+
+.application__image path {
+    fill: var(--main-color);
+}
+
+
+/*--- Footer ---*/
+.footer {
+    background-color: var(--white);
+}
+
+
+/*--- Media Queries ---*/
+@media screen and (min-width: 768px) {
+    .header {
+        margin-left: 90px;
+    }
+
+    .aside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90px;
+        height: 100%;
+        z-index: 10;
+        box-shadow: 8px 20px 20px var(--soft-gray-alt);
+    }
+
+    .controllers {
+        margin-left: 90px;
+    }
+
+    .footer {
+        margin-left: 90px;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .panel-option__container {
+        flex-direction: row;
+    }
+}
